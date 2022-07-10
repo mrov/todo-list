@@ -41,7 +41,7 @@ describe('TodoListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should add a new item on the todoList', () => {
+  it('should add a new item in the todoList', () => {
     const addTodoItemSpy = spyOn(component, "addTodoItem").and.callThrough();
 
     const addItemButton = fixture.debugElement.query( By.css('#addTodoItem') ).nativeElement;
@@ -61,5 +61,37 @@ describe('TodoListComponent', () => {
     expect(addTodoItemSpy).toHaveBeenCalled();
     expect(component.newTodoItem.description).toBeFalsy();
     expect(component.todoList.length).toBeGreaterThan(1);
+  });
+
+  it('should delete a item in the todoList', () => {
+    const addTodoItemSpy = spyOn(component, "addTodoItem").and.callThrough();
+    const deleteTodoItemSpy = spyOn(component, "deleteTodoItem").and.callThrough();
+
+
+    const addItemButton = fixture.debugElement.query( By.css('#addTodoItem') ).nativeElement;
+    const todoInput: HTMLInputElement = fixture.debugElement.query( By.css('#todoInput') ).nativeElement;
+
+    
+    todoInput.value = 'testetodo';
+    todoInput.dispatchEvent(new Event('input'));
+    
+    fixture.detectChanges();
+
+    addItemButton.dispatchEvent(new Event('click'));
+
+    fixture.detectChanges();
+    
+    expect(addTodoItemSpy).toHaveBeenCalled();
+    expect(component.newTodoItem.description).toBeFalsy();
+    expect(component.todoList.length).toBeGreaterThan(1);
+
+    const deleteItemButton = fixture.debugElement.query( By.css('#delete-item-1') ).nativeElement;
+
+    deleteItemButton.dispatchEvent(new Event('click'));
+
+    fixture.detectChanges();
+
+    expect(deleteTodoItemSpy).toHaveBeenCalledOnceWith(1);
+    expect(component.todoList.length).toEqual(1);
   });
 });

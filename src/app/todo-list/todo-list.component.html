@@ -4,7 +4,7 @@
             <mat-card-title>{{ todo.description }}</mat-card-title>
             <mat-card-actions>
                 <button mat-raised-button color="primary">Feito</button>
-                <button mat-raised-button (click)="deleteTodoItem(index)" color="warn">Deletar</button>
+                <button mat-raised-button [id]="'delete-item-'+index" (click)="deleteTodoItem(index)" color="warn">Deletar</button>
             </mat-card-actions>
         </mat-card>
         <div class="card-inputs">
