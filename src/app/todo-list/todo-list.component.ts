@@ -15,9 +15,13 @@ export class TodoListComponent implements OnInit {
 
   constructor() { }
 
-  addTodoItem () {
+  addTodoItem () : void {
     this.todoList.push({description: this.newTodoItem.description});
     this.newTodoItem.description = "";
+  }
+
+  deleteTodoItem (index: number) : void {
+    this.todoList.splice(index, 1);
   }
 
   ngOnInit(): void {

@@ -1,22 +1,26 @@
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%;">
     <div class="card-wrapper" style="width: 50%; margin: 30px 0px">
-        <mat-card *ngFor="let todo of todoList" style="margin-bottom: 30px;">
+        <mat-card *ngFor="let todo of todoList; let index = index;" style="margin-bottom: 30px;">
             <mat-card-title>{{ todo.description }}</mat-card-title>
             <mat-card-actions>
                 <button mat-raised-button color="primary">Feito</button>
-                <button mat-raised-button color="warn">Deletar</button>
+                <button mat-raised-button (click)="deleteTodoItem(index)" color="warn">Deletar</button>
             </mat-card-actions>
-          </mat-card>
+        </mat-card>
         <div class="card-inputs">
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Proxima tarefa</mat-label>
-                <input matInput id="todoInput" title="teste" [(ngModel)]="newTodoItem.description" 
-                type="text" placeholder="Digite">
-              </mat-form-field>
-            {{ newTodoItem.description }}
+
+            <mat-card style="margin-bottom: 30px;">
+                <mat-card-title style="margin-bottom: 20px;">Adicionar sua tarefa</mat-card-title>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Proxima tarefa</mat-label>
+                    <input matInput id="todoInput" title="teste" [(ngModel)]="newTodoItem.description" 
+                    type="text" placeholder="Digite"/>
+                </mat-form-field>
+                <button mat-raised-button id="addTodoItem" style="margin-left: 30px;"
+                (click)="addTodoItem()" color="primary">Adicionar item</button>
+            </mat-card>
+
+            
         </div>
-    </div>
-    <div>
-        <button mat-raised-button id="addTodoItem" (click)="addTodoItem()" color="primary">Adicionar item</button>
     </div>
 </div>
