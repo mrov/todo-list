@@ -21,4 +21,11 @@ cd [PROJECT NAME]
 ng serve
 ```
 
+Run the karma test runner:
+
+```
+cd [PROJECT NAME]
+npm run test
+```
+
 Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
