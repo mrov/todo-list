@@ -1,0 +1,191 @@
+{
+  "id": "13201ba8-dbc8-4a8f-9447-7b11e69cce8c",
+  "version": "2.0",
+  "name": "todolist",
+  "url": "http://localhost:4200",
+  "tests": [{
+    "id": "132d356f-8cf1-4b58-b020-e7ce7e25222e",
+    "name": "Add new item",
+    "commands": [{
+      "id": "65e9fb62-784a-47b9-8a77-58e76bb7590b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "970896db-971e-4e02-9754-bd162408878f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x1012",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74d0cb3b-748b-4683-8f87-be40d163876a",
+      "comment": "",
+      "command": "click",
+      "target": "id=todoInput",
+      "targets": [
+        ["id=todoInput", "id"],
+        ["css=#todoInput", "css:finder"],
+        ["xpath=//input[@id='todoInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc94f39c-774a-4add-96a9-86af22a50264",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#addTodoItem > .mat-button-wrapper",
+      "targets": [
+        ["css=#addTodoItem > .mat-button-wrapper", "css:finder"],
+        ["xpath=//button[@id='addTodoItem']/span", "xpath:idRelative"],
+        ["xpath=//mat-card/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar item')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8df78c5-1dc5-4c61-bda6-0246696255e9",
+      "comment": "",
+      "command": "type",
+      "target": "id=todoInput",
+      "targets": [
+        ["id=todoInput", "id"],
+        ["css=#todoInput", "css:finder"],
+        ["xpath=//input[@id='todoInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Moabe"
+    }, {
+      "id": "52a30b79-41fb-4c13-b633-ae6ea9381764",
+      "comment": "",
+      "command": "click",
+      "target": "css=#addTodoItem > .mat-button-wrapper",
+      "targets": [
+        ["css=#addTodoItem > .mat-button-wrapper", "css:finder"],
+        ["xpath=//button[@id='addTodoItem']/span", "xpath:idRelative"],
+        ["xpath=//mat-card/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar item')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26978c1d-f707-402a-bc4c-44844877fef3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#addTodoItem > .mat-button-wrapper",
+      "targets": [
+        ["css=#addTodoItem > .mat-button-wrapper", "css:finder"],
+        ["xpath=//button[@id='addTodoItem']/span", "xpath:idRelative"],
+        ["xpath=//mat-card/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar item')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e6dcaa7d-d0e2-4fc4-be8c-1ec59e0b3d57",
+    "name": "Add and Delete an item",
+    "commands": [{
+      "id": "3c45b4ea-630d-4d05-89c0-132aa709c6eb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "458c5cf3-e65c-43b9-a3cf-a5876b9c84db",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x1012",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1af66e3c-13ca-44c3-8d23-7f29a842194f",
+      "comment": "",
+      "command": "click",
+      "target": "id=todoInput",
+      "targets": [
+        ["id=todoInput", "id"],
+        ["css=#todoInput", "css:finder"],
+        ["xpath=//input[@id='todoInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad5526a2-74fb-44b6-8f0d-57bf7d9d6b10",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#addTodoItem > .mat-button-wrapper",
+      "targets": [
+        ["css=#addTodoItem > .mat-button-wrapper", "css:finder"],
+        ["xpath=//button[@id='addTodoItem']/span", "xpath:idRelative"],
+        ["xpath=//mat-card/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar item')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b536bfa-4473-429c-a116-fb2cb2520307",
+      "comment": "",
+      "command": "type",
+      "target": "id=todoInput",
+      "targets": [
+        ["id=todoInput", "id"],
+        ["css=#todoInput", "css:finder"],
+        ["xpath=//input[@id='todoInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Moabe"
+    }, {
+      "id": "59305bb1-db38-4046-96ff-00269e274d85",
+      "comment": "",
+      "command": "click",
+      "target": "css=#addTodoItem > .mat-button-wrapper",
+      "targets": [
+        ["css=#addTodoItem > .mat-button-wrapper", "css:finder"],
+        ["xpath=//button[@id='addTodoItem']/span", "xpath:idRelative"],
+        ["xpath=//mat-card/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar item')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e846ad3-cb49-4109-8b49-76cbcc492bce",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#addTodoItem > .mat-button-wrapper",
+      "targets": [
+        ["css=#addTodoItem > .mat-button-wrapper", "css:finder"],
+        ["xpath=//button[@id='addTodoItem']/span", "xpath:idRelative"],
+        ["xpath=//mat-card/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar item')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a6f71e2-f6e9-4755-86f6-008a25a675ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=#delete-item-1 > .mat-button-wrapper",
+      "targets": [
+        ["css=#delete-item-1 > .mat-button-wrapper", "css:finder"],
+        ["xpath=//button[@id='delete-item-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-card[2]/mat-card-actions/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a83a3e78-e9ed-41d6-b7cc-45afaa65fa3d",
+      "comment": "",
+      "command": "assert",
+      "target": "css=#delete-item-1 > .mat-button-wrapper",
+      "targets": [],
+      "value": "null"
+    }]
+  }],
+  "suites": [{
+    "id": "5af05614-53e9-4f6b-92d6-b88246651fd0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["132d356f-8cf1-4b58-b020-e7ce7e25222e"]
+  }],
+  "urls": ["http://localhost:4200/"],
+  "plugins": []
+}
