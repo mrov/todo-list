@@ -1,6 +1,16 @@
-<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%;">
-    <div class="card-wrapper" style="width: 50%; margin: 30px 0px">
-        <mat-card *ngFor="let todo of todoList; let index = index;" style="margin-bottom: 30px;">
+<div class="container" style="display: flex; justify-content: center; width: 100%;">
+    <div class="categories">
+        <h1>Categorias</h1>
+
+        <button mat-flat-button color="">Hoje</button>
+        <button mat-flat-button color="">Esta Semana</button>
+        <button mat-flat-button color="">Este Mês</button>
+        <button mat-mini-fab color="accent" style="align-self: flex-end; margin: 0 auto;" aria-label="Example icon button with a plus one icon">
+            <mat-icon>plus_one</mat-icon>
+        </button>
+    </div>
+    <div class="card-wrapper">
+        <mat-card *ngFor="let todo of todoList; let index = index;" style="margin-bottom: 30px; background-color: #9CB4CC;">
             <mat-card-title>{{ todo.description }}</mat-card-title>
             <mat-card-actions>
                 <button mat-raised-button color="primary">Feito</button>
@@ -9,9 +19,9 @@
         </mat-card>
         <div class="card-inputs">
 
-            <mat-card style="margin-bottom: 30px;">
+            <mat-card style="background-color: #9CB4CC;">
                 <mat-card-title style="margin-bottom: 20px;">Adicionar sua tarefa</mat-card-title>
-                <mat-form-field class="example-full-width" appearance="fill">
+                <mat-form-field class="example-full-width" appearance="outline">
                     <mat-label>Proxima tarefa</mat-label>
                     <input matInput id="todoInput" title="teste" [(ngModel)]="newTodoItem.description" 
                     type="text" placeholder="Digite"/>
