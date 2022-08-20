@@ -2,15 +2,24 @@
     <div class="categories">
         <h1>Categorias</h1>
 
-        <button mat-flat-button color="">Hoje</button>
-        <button mat-flat-button color="">Esta Semana</button>
-        <button mat-flat-button color="">Este Mês</button>
-        <button mat-mini-fab color="accent" style="align-self: flex-end; margin: 0 auto;" aria-label="Example icon button with a plus one icon">
+        <button *ngFor="let category of categories; let index = index;" mat-flat-button
+        [attr.class]='selectedCategoryIndex === index ? primaryClass : whiteClass'
+        (click)="selectedCategoryIndex = index;">
+            {{ category.description }}
+        </button>
+        <button *ngIf="!addCategoryInput" mat-mini-fab color="accent" style="align-self: flex-end; margin: 0 auto;"
+        (click)="addCategoryInput = true;" aria-label="Example icon button with a plus one icon">
             <mat-icon>plus_one</mat-icon>
         </button>
+        <mat-form-field *ngIf="addCategoryInput" appearance="outline">
+            <mat-label>Nova categoria</mat-label>
+            <input matInput id="categoryInput" title="teste"
+            [(ngModel)]="categoryInput" (keydown)="keyDownHandler($event)" type="text" placeholder="Digite"/>
+        </mat-form-field>
     </div>
     <div class="card-wrapper">
-        <mat-card *ngFor="let todo of todoList; let index = index;" style="margin-bottom: 30px; background-color: #9CB4CC;">
+        <h2>Lista: {{categories[selectedCategoryIndex].description}}</h2>
+        <mat-card *ngFor="let todo of categories[selectedCategoryIndex].todoList; let index = index;" style="margin-bottom: 30px; background-color: #9CB4CC;">
             <mat-card-title>{{ todo.description }}</mat-card-title>
             <mat-card-actions>
                 <button mat-raised-button color="primary">Feito</button>
@@ -18,7 +27,6 @@
             </mat-card-actions>
         </mat-card>
         <div class="card-inputs">
-
             <mat-card style="background-color: #9CB4CC;">
                 <mat-card-title style="margin-bottom: 20px;">Adicionar sua tarefa</mat-card-title>
                 <mat-form-field class="example-full-width" appearance="outline">
