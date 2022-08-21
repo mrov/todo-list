@@ -19,7 +19,7 @@
     </div>
     <div class="card-wrapper">
         <h2>Lista: {{categories[selectedCategoryIndex].description}}</h2>
-        <mat-card *ngFor="let todo of categories[selectedCategoryIndex].todoList; let index = index;" style="margin-bottom: 30px; background-color: #9CB4CC;">
+        <mat-card *ngFor="let todo of categories[selectedCategoryIndex].todoList; let index = index;" style="margin-bottom: 15px; background-color: #ffffff;">
             <mat-card-title>{{ todo.description }}</mat-card-title>
             <mat-card-actions>
                 <button mat-raised-button color="primary">Feito</button>
@@ -27,7 +27,7 @@
             </mat-card-actions>
         </mat-card>
         <div class="card-inputs">
-            <mat-card style="background-color: #9CB4CC;">
+            <mat-card>
                 <mat-card-title style="margin-bottom: 20px;">Adicionar sua tarefa</mat-card-title>
                 <mat-form-field class="example-full-width" appearance="outline">
                     <mat-label>Proxima tarefa</mat-label>
@@ -37,8 +37,6 @@
                 <button mat-raised-button id="addTodoItem" style="margin-left: 30px;"
                 (click)="addTodoItem()" color="primary">Adicionar item</button>
             </mat-card>
-
-            
         </div>
     </div>
 </div>
